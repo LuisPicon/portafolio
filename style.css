@@ -1,0 +1,266 @@
+/* ********** Custom Properties ********** */
+:root {
+  --color-primario: #000b1a;
+  --color-secundario: #53bff9;
+  --color-terciario: #c7cbd2;
+  --color-azul-claro: #001938;
+  --blanco: #fff;
+  --fuente-principal: "Outfit", sans-serif;
+}
+
+/* ********** Reseteo ********** */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1400 - 300)));
+}
+
+/* ********** Utilities ********** */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*estilos generales*/
+.pagina {
+  width: 100%;
+  min-height: 100vh;
+}
+section:nth-child(even) {
+  background-color: var(--color-primario);
+}
+
+section:nth-child(odd) {
+  background-color: var(--color-azul-claro);
+}
+
+/* ********** Componentes ********** */
+/*cabezera*/
+.cabezera {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  backdrop-filter: blur(10px);
+  border-top: thin solid var(--color-secundario);
+}
+.cabezera-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 64em;
+  width: 100%;
+}
+.logo {
+  width: 15%;
+}
+.luis {
+  font-family: var(--fuente-principal);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-left: 5px;
+  color: var(--blanco);
+  text-decoration: none;
+  transition: color ease 0.3s;
+}
+.luis:hover {
+  color: var(--color-secundario);
+}
+.menu {
+  gap: 20px;
+  margin-top: 4px;
+}
+.menu-a {
+  color: var(--blanco);
+  text-decoration: none;
+  transition: color ease 0.3s;
+  font-family: "Outfit", sans-serif;
+}
+.menu-a:hover {
+  color: var(--color-secundario);
+}
+.contacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+}
+.contacto-img {
+  margin-top: 3px;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.github {
+  display: none;
+}
+@media screen and (min-width: 37.5em) {
+  .cabezera {
+    height: 5rem;
+  }
+  .cabezera-contenedor {
+    justify-content: space-around;
+  }
+  .contacto {
+    justify-content: flex-end;
+  }
+  .contacto-img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .github {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 64em) {
+  .cabezera {
+    top: 0;
+    border-top: none;
+    border-bottom: thin solid var(--color-secundario);
+  }
+
+  .contacto {
+    gap: 0.5rem;
+  }
+}
+/*pagina 1*/
+
+.pagina-1 {
+  color: var(--blanco);
+}
+.pagina-1-principal {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1rem;
+  max-width: 64em;
+  width: 100%;
+  text-align: center;
+}
+
+.pagina-1-informacion {
+  gap: 1rem;
+  width: 90%;
+}
+.titulo-principal {
+  margin-top: -0.5rem;
+  font-family: var(--fuente-principal);
+  font-size: 2rem;
+  color: var(--blanco);
+  transition: transform 1s ease;
+}
+.punto {
+  color: var(--color-secundario);
+}
+.span-blanco {
+  color: var(--blanco);
+}
+.pagina-1 p {
+  font-family: var(--fuente-principal);
+  color: var(--color-terciario);
+  width: 100%;
+}
+
+.soluciones {
+  color: rgb(255, 255, 0);
+}
+
+.plazi {
+  color: rgb(0, 255, 0);
+}
+.musica {
+  color: #0866ff;
+}
+.pagina-1-imagen img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pagina-1-botones {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  width: 9rem;
+  border-radius: 0.3rem;
+  color: var(--blanco);
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+.curriculum {
+  margin-right: 0.5rem;
+  border: 2px solid var(--color-secundario);
+  color: var(--color-secundario);
+  text-align: center;
+}
+.creando {
+  border: 2px solid var(--color-secundario);
+  background-color: var(--color-secundario);
+}
+
+/*portatiles */
+@media screen and (min-width: 64em) {
+  .pagina-1-principal {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .pagina-1-informacion {
+    text-align: left;
+    width: 50%;
+    margin-left: -2.5rem;
+  }
+
+  .pagina-1 p {
+    width: 100%;
+  }
+  .pagina-1-imagen img {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
+/*pagina 2*/
+
+.pagina-2 {
+  margin-top: -18px;
+}
+/*pagina 3*/
+
+.pagina-3 {
+  margin-top: -18px;
+}
+
+/*pagina 4*/
+
+.pagina-4 {
+  margin-top: -22px;
+}
+/*pagina 5*/
+.pagina-5 {
+  margin-top: -18px;
+}
+
+/*clases a agregar con java Scripts*/
+
+/*color del indice*/
+.activo {
+  color: var(--color-secundario);
+}
