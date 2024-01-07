@@ -141,11 +141,10 @@ section:nth-child(odd) {
 .pagina-1 {
   color: var(--blanco);
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 .pagina-1-principal {
-  margin-top: 10vh;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
