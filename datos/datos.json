@@ -38,5 +38,22 @@
       "nombre": "React",
       "color": "#00CDFF"
     }
+  ],
+  "edutubers": [
+    {
+      "nombre": "Jhonmircha",
+      "color": "#F86500",
+      "canal": "https://www.youtube.com/@jonmircha"
+    },
+    {
+      "nombre": "midudev",
+      "color": "#0277BD",
+      "canal": "https://www.youtube.com/@midudev"
+    },
+    {
+      "nombre": "MoureDev",
+      "color": "#D8A306",
+      "canal": "https://www.youtube.com/@mouredev"
+    }
   ]
 }
