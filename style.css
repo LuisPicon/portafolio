@@ -115,6 +115,9 @@ section:nth-child(odd) {
   .cabezera-contenedor {
     justify-content: space-around;
   }
+  .menu {
+    gap: 20px;
+  }
   .contacto {
     justify-content: flex-end;
   }
@@ -319,9 +322,11 @@ section:nth-child(odd) {
 /*targeta3*/
 .targeta3 {
   width: 90%;
-  font-family: var(--fuente-principal);
-  padding: 0.5rem;
+  padding: 0.3rem;
   margin: auto;
+  font-family: var(--fuente-principal);
+  border: thin solid var(--color-terciario);
+  border-radius: 0.3rem;
 }
 
 .targeta3-titulo {
@@ -332,13 +337,14 @@ section:nth-child(odd) {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  padding-bottom: 1rem;
 }
 .targeta3-lenguajes div,
 .targeta4-edutubers div {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 6.5rem;
+  width: 5rem;
   height: 2rem;
   border-radius: 1rem;
   text-align: center;
@@ -350,14 +356,18 @@ section:nth-child(odd) {
   font-size: small;
 }
 .targeta4 {
-  font-family: var(--fuente-principal);
+  padding: 0.3rem;
   width: 90%;
   margin: auto;
+  font-family: var(--fuente-principal);
+  border: thin solid var(--color-terciario);
+  border-radius: 0.3rem;
 }
 @media screen and (min-width: 37.5em) {
   .targeta1,
   .targeta2-contenedor,
-  .targeta3 {
+  .targeta3,
+  .targeta4 {
     width: 50%;
   }
 }
@@ -392,7 +402,6 @@ section:nth-child(odd) {
     margin-top: -0.1rem;
   }
   .targeta3 {
-    padding: 0;
     width: 80%;
     grid-column: 1/2;
     grid-row: 2/3;
