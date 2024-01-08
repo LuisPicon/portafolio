@@ -300,6 +300,7 @@ section:nth-child(odd) {
   border: thin solid var(--color-terciario);
   color: var(--blanco);
   border-radius: 0.3rem;
+  max-height: 300px;
   overflow-x: auto;
 }
 .targeta2-titulo {
@@ -322,11 +323,13 @@ section:nth-child(odd) {
 /*targeta3*/
 .targeta3 {
   width: 90%;
-  padding: 0.3rem;
+  padding: 0.5rem;
   margin: auto;
   font-family: var(--fuente-principal);
   border: thin solid var(--color-terciario);
   border-radius: 0.3rem;
+  max-height: 200px;
+  overflow-x: auto;
 }
 
 .targeta3-titulo {
@@ -356,8 +359,10 @@ section:nth-child(odd) {
   font-size: small;
 }
 .targeta4 {
-  padding: 0.3rem;
+  padding: 0.5rem;
   width: 90%;
+  max-height: 200px;
+  overflow-x: auto;
   margin: auto;
   font-family: var(--fuente-principal);
   border: thin solid var(--color-terciario);
@@ -406,9 +411,15 @@ section:nth-child(odd) {
     grid-column: 1/2;
     grid-row: 2/3;
     margin: 0;
+    height: auto;
+    max-height: 150px;
+    overflow: hidden;
   }
   .targeta4 {
     width: 100%;
+    height: auto;
+    max-height: 150px;
+    overflow: hidden;
     margin: 0;
   }
 }
