@@ -471,6 +471,7 @@ section:nth-child(odd) {
 }
 .targeta-p {
   color: var(--color-terciario);
+  margin-top: -12px;
 }
 .targeta-informacion a {
   display: inline-block;
@@ -525,11 +526,9 @@ section:nth-child(odd) {
   }
   .proyectos-targeta {
     width: 100%;
-    height: 17rem;
+    height: 18rem;
   }
-  .targeta-informacion p {
-    margin-top: 5px;
-  }
+
   .targeta-informacion a {
     margin-top: -10px;
   }
