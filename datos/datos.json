@@ -58,18 +58,18 @@
   ],
   "proyectos": [
     {
-      "imagen": "https://i.imgur.com/Ut4K5ca.png",
-      "titulo": "T O D O",
-      "descripcion": "aplicación de tareas construida con HTML, CSS y JavaScript",
-      "codigo": "https://github.com/L-E-R-P/TODO",
-      "web": "https://todo.luisrodriguez.online/"
-    },
-    {
       "imagen": "https://i.imgur.com/jvz1Mq9.png",
       "titulo": "Pomodoro",
       "descripcion": "Pomodoro construido con HTML, CSS y JavaScript",
       "codigo": "https://github.com/L-E-R-P/Pomodoro",
       "web": "https://pomodoro.luisrodriguez.online/"
+    },
+    {
+      "imagen": "https://i.imgur.com/Ut4K5ca.png",
+      "titulo": "T O D O",
+      "descripcion": "aplicación de tareas construida con HTML, CSS y JavaScript",
+      "codigo": "https://github.com/L-E-R-P/TODO",
+      "web": "https://todo.luisrodriguez.online/"
     }
   ]
 }

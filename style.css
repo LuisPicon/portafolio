@@ -436,6 +436,8 @@ section:nth-child(odd) {
 /**** pagina 3 ******/
 .pagina-3 {
   margin-top: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .pagina3-proyectos {
   display: grid;
@@ -446,10 +448,15 @@ section:nth-child(odd) {
   max-width: 64rem;
   max-height: 100vh;
   width: 90%;
-  padding-top: 1rem;
-  height: auto;
+  margin-bottom: 3.5rem;
   overflow: scroll;
   font-family: var(--fuente-principal);
+}
+.proyectos-titulo {
+  color: var(--blanco);
+  font-family: var(--fuente-principal);
+  font-size: x-large;
+  margin-left: 1.3rem;
 }
 .proyectos-targeta {
   width: 100%;
@@ -470,6 +477,7 @@ section:nth-child(odd) {
   color: var(--blanco);
 }
 .targeta-p {
+  font-size: medium;
   color: var(--color-terciario);
   margin-top: -12px;
 }
@@ -523,6 +531,9 @@ section:nth-child(odd) {
     height: 100vh;
     overflow: auto;
     padding: 1rem 0 1rem 0;
+  }
+  .proyectos-titulo {
+    margin-left: -1.5rem;
   }
   .proyectos-targeta {
     width: 100%;
