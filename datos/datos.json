@@ -58,7 +58,7 @@
   ],
   "proyectos": [
     {
-      "imagen": "p.png",
+      "imagen": "https://i.imgur.com/Ut4K5ca.png",
       "titulo": "T O D O",
       "descripcion": "aplicación de tareas construida con HTML, CSS y JavaScript",
       "codigo": "https://github.com/L-E-R-P/TODO",
