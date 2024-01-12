@@ -434,7 +434,9 @@ section:nth-child(odd) {
   }
 }
 /**** pagina 3 ******/
-
+.pagina-3 {
+  margin-top: 1rem;
+}
 .pagina3-proyectos {
   display: grid;
   grid-template-columns: 1fr;
@@ -442,16 +444,16 @@ section:nth-child(odd) {
   row-gap: 1rem;
   margin: auto;
   max-width: 64rem;
-  max-height: 190vh;
+  max-height: 100vh;
   width: 90%;
+  padding-top: 1rem;
   height: auto;
   overflow: scroll;
-  color: var(--blanco);
   font-family: var(--fuente-principal);
 }
 .proyectos-targeta {
   width: 100%;
-  height: 18rem;
+  height: 21rem;
   margin: auto;
   background-color: var(--color-azul-claro);
   border-radius: 0.3rem;
@@ -460,14 +462,14 @@ section:nth-child(odd) {
   object-fit: cover;
   object-position: center top;
   width: 100%;
-  height: 50%;
   border-radius: 0.3rem 0.3rem 0 0;
   margin-bottom: -1rem;
 }
 .targeta-informacion {
   padding: 0.5rem;
+  color: var(--blanco);
 }
-.targeta-informacion p {
+.targeta-p {
   color: var(--color-terciario);
 }
 .targeta-informacion a {
@@ -495,12 +497,14 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0;
   }
   .pagina3-proyectos {
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(3, 1fr);
     column-gap: 1rem;
   }
+
   .proyectos-targeta {
     width: 100%;
     height: 20rem;
@@ -523,11 +527,8 @@ section:nth-child(odd) {
     width: 100%;
     height: 17rem;
   }
-  .targeta-informacion h3 {
-    margin-top: 10px;
-  }
   .targeta-informacion p {
-    margin-top: -10px;
+    margin-top: 5px;
   }
   .targeta-informacion a {
     margin-top: -10px;
@@ -540,9 +541,6 @@ section:nth-child(odd) {
   .pagina3-proyectos {
     width: 70vw;
     row-gap: 0;
-  }
-  .proyectos-targeta {
-    height: auto;
   }
 }
 @media screen and (min-width: 80em) and (min-height: 50em) {

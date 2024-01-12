@@ -120,8 +120,8 @@ async function insertarProyectos(clase, key) {
       <div class="proyectos-targeta">
         <img  src="${i.imagen}" alt="${i.titulo}">
         <div class="targeta-informacion">
-          <h3>${i.titulo}</h3>
-          <p>${i.descripcion} </p>
+          <p >${i.titulo}</p>
+          <p class="targeta-p">${i.descripcion} </p>
           <a href="${i.codigo}" class="codigo" target="_blank">Codigo</a>
           <a href="${i.web}" class="web" target="_blank">Sitio web</a>
         </div>
