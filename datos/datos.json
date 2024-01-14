@@ -58,6 +58,13 @@
   ],
   "proyectos": [
     {
+      "imagen": "https://i.imgur.com/SAmpcGM.png",
+      "titulo": "Genovas Llanero Emprendedor",
+      "descripcion": "Icommerce hecho con WordPress, componentes de HTML, CSS y JavaScript.",
+      "codigo": "https://github.com/L-E-R-P/GENO",
+      "web": "https://genovasllaneroemprendedor.com/"
+    },
+    {
       "imagen": "https://i.imgur.com/jvz1Mq9.png",
       "titulo": "Pomodoro",
       "descripcion": "Pomodoro construido con HTML, CSS y JavaScript",
