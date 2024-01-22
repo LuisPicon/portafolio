@@ -19,6 +19,10 @@
     {
       "nombre": "Git",
       "imagen": "https://img.icons8.com/color/48/git.png"
+    },
+    {
+      "nombre": "Figma",
+      "imagen": "https://img.icons8.com/color/48/figma--v1.png"
     }
   ],
   "proximosLenguajes": [

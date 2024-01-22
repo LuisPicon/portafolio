@@ -181,6 +181,8 @@ section:nth-child(odd) {
   color: var(--blanco);
 }
 .pagina-1 p {
+  font-size: 1rem;
+
   font-family: var(--fuente-principal);
   color: var(--color-terciario);
   width: 100%;
@@ -242,6 +244,9 @@ section:nth-child(odd) {
     text-align: left;
     width: 50%;
     margin-left: -2.5rem;
+  }
+  .titulo-principal {
+    font-size: 1.9rem;
   }
 
   .pagina-1 p {
