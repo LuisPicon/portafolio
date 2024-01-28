@@ -133,8 +133,95 @@ async function insertarProyectos(clase, key) {
     $tarjeta.insertAdjacentHTML("beforeend", $mensaje);
   }
 }
+//insertar diseños
+async function insertarDiseños(clase, key) {
+  //clase => contenedor donde se insertara los elementos
+  // key =>calve del json a iteral
+  const $div = document.querySelector(clase);
+  console.log($div);
+  try {
+    let res = await fetch("datos/datos.json"),
+      json = await res.json();
+    if (!res.ok) throw { estado: res.status, estadoTexto: res.statusText };
+    json[key].forEach((i) => {
+      if (i.creado) {
+        // este templete se inserta el proyecto ya esta creado
+        let $templete = `
+        <div class="grid-card">
+          <img src="${i.imgPoster}" class="img" alt="${i.nombre}" />
+          <div class="card-info">
+            <a href="${i.enlace}">
+              <img
+                width="20"
+                height="20"
+                src="https://img.icons8.com/ios-glyphs/30/external-link.png"
+                alt="external-link"
+              />
+            </a>
+            <p>${i.nombre}</p>
+          </div>
+          </div>`;
+        $div.insertAdjacentHTML("beforeend", $templete);
+      } else {
+        // este templete se inserta el proyecto no esta creado
+        let $templete = `
+         <div class="grid-card">
+           <img src="${i.imgPoster}" class="img" alt="${i.nombre}" />
+           <div class="card-info">
+             <p>${i.nombre}</p>
+           </div>
+           </div>`;
+        $div.insertAdjacentHTML("beforeend", $templete);
+      }
+    });
+  } catch (error) {
+    let $mensaje = `<p>error${error}</p>`;
+    $div.insertAdjacentHTML("beforeend", $mensaje);
+  }
+}
 
 obtenerLenguajes(".targeta2-lenguajes", "lenguajes");
 obtenerProximosLenguajes(".targeta3-lenguajes", "proximosLenguajes");
 obtenerEdutubers(".targeta4-edutubers", "edutubers");
 insertarProyectos(".pagina3-proyectos", "proyectos");
+
+insertarDiseños(".pagina4-grid", "diseños");
+/*
+  codigo para el modal
+*/
+
+const $contenedorModal = document.querySelector(".pagina4-modal"),
+  $modal = document.querySelector(".modal");
+
+document.addEventListener("click", (e) => {
+  const $evento = e.target.classList;
+  if ($evento.contains("img")) {
+    $contenedorModal.classList.remove("invisible");
+    $contenedorModal.classList.add("visible");
+
+    $contenedorModal.innerHTML = `<div class="modal">
+    <!--cerrar modal-->
+    <img
+      class="cerrar"
+      id="cerrar-modal"
+      src="https://img.icons8.com/color/48/close-window.png"
+      alt="close-window"
+    />
+    <div class="modal-contenido">
+      <h3>Color b</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+        repellat aliquam doloremque quod nam est deleniti quaerat?
+        Eligendi rerum nemo ipsum rem quaerat porro natus ullam esse,
+        vitae, ipsa itaque.
+      </p>
+      <img src="desktop.png" class="img" alt="" />
+      <img src="Diseño sin título.png" class="img" alt="" />
+    </div>
+  </div>`;
+  }
+  if ($evento.contains("cerrar")) {
+    $contenedorModal.classList.remove("visible");
+    $contenedorModal.classList.add("invisible");
+  }
+});

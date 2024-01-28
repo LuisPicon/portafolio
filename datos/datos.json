@@ -82,5 +82,16 @@
       "codigo": "https://github.com/L-E-R-P/TODO",
       "web": "https://todo.luisrodriguez.online/"
     }
+  ],
+  "diseños": [
+    {
+      "nombre": "Color b",  
+      "creado": false,
+      "enlace": "",
+      "descripcion": "Explora y usa los colores que se emplean en los lenguajes de programación, tecnologías y bases de datos más populares en el desarrollo de software. ¡Haz que tu diseño destaque!",
+      "imgPoster": "https://i.imgur.com/EyOxdqg.png",
+      "imgPrimaria": "https://i.imgur.com/rQkOIzE.png",
+      "imgSecundaria": "https://i.imgur.com/EyOxdqg.png"
+    }
   ]
 }

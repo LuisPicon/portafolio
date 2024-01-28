@@ -53,6 +53,7 @@ section:nth-child(odd) {
 /* ********** Componentes ********** */
 /***cabezera***/
 .cabezera {
+  z-index: 9;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -452,7 +453,7 @@ section:nth-child(odd) {
   margin: auto;
   max-width: 64rem;
   max-height: 100vh;
-  width: 90%;
+  width: 85vw;
   margin-bottom: 3.5rem;
   overflow: scroll;
   font-family: var(--fuente-principal);
@@ -565,13 +566,164 @@ section:nth-child(odd) {
 }
 
 /*pagina 4*/
-
+/*
+  grid de 3*3 con un modal para cada targeta
+*/
 .pagina-4 {
-  margin-top: -22px;
+  scroll-margin: -18px;
+  flex-direction: column;
 }
-/*pagina 5*/
-.pagina-5 {
-  margin-top: -18px;
+.pagina4-titulo {
+  color: var(--blanco);
+  padding-top: 1rem;
+  font-family: var(--fuente-principal);
+  font-size: x-large;
+  margin-left: 1.3rem;
+}
+.pagina4-grid {
+  width: 85vw;
+  max-width: 64rem;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 251px);
+  gap: 1rem;
+  max-width: 64rem;
+}
+.grid-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.grid-card .img {
+  border-radius: 0.3rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.card-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+  height: 1.5rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  margin-top: 6px;
+  margin-right: 6px;
+  padding-right: 0.2rem;
+  background-color: var(--blanco);
+  box-shadow: 1px 2px 21px 5px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 1px 2px 21px 5px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 1px 2px 21px 5px rgba(0, 0, 0, 0.21);
+}
+
+.card-info img {
+  margin-top: 3px;
+}
+.card-info p {
+  margin-left: -6px;
+  color: #000;
+  font-size: medium;
+  font-family: var(--fuente-principal);
+}
+@media screen and (min-width: 37.5em) {
+  .pagina4-titulo {
+    text-align: center;
+  }
+  .pagina4-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 251px);
+  }
+}
+@media screen and (min-width: 75em) {
+  .pagina-4 {
+    scroll-margin: 5rem;
+  }
+  .pagina4-titulo {
+    text-align: center;
+    margin-left: -1.5rem;
+  }
+
+  .pagina4-grid {
+    width: 70vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 251px);
+  }
+}
+
+@media screen and (min-width: 64em) and (min-height: 37.5em) {
+  .pagina4-grid {
+    width: 70vw;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* modal de la pagian 4*/
+.pagina4-modal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  backdrop-filter: blur(6px);
+}
+.modal {
+  position: relative;
+  border-radius: 0.3rem;
+  background-color: var(--blanco);
+  max-width: 64rem;
+  width: 80%;
+  height: 60vh;
+  overflow-y: auto;
+}
+.modal-contenido {
+  width: 85%;
+  margin: auto;
+  color: var(--color-primario);
+  font-family: var(--fuente-principal);
+}
+.modal-contenido p {
+  width: 80%;
+  color: #001938;
+}
+
+.modal .img {
+  border-radius: 0.3rem;
+  width: 100%;
+
+  object-fit: contain;
+}
+.cerrar {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: fixed;
+}
+@media screen and (min-width: 75em) {
+  .modal {
+    height: 80vh;
+  }
+  .cerrar {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 /*clases a agregar con java Scripts*/
@@ -579,4 +731,11 @@ section:nth-child(odd) {
 /*color del indice*/
 .activo {
   color: var(--color-secundario);
+}
+.visible {
+  visibility: visible;
+  animation: scale 0.3s ease;
+}
+.invisible {
+  visibility: hidden;
 }
