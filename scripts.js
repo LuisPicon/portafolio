@@ -146,7 +146,7 @@ async function insertarDiseños(clase, key) {
     json[key].forEach((i) => {
       if (i.creado) {
         // este templete se inserta el proyecto ya esta creado
-        let $templete = `
+        let $templete = `  
         <div class="grid-card">
           <img src="${i.imgPoster}" class="img" alt="${i.nombre}" />
           <div class="card-info">
