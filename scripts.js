@@ -165,7 +165,7 @@ async function insertarDiseños(clase, key) {
         // este templete se inserta el proyecto no esta creado
         let $templete = `
           <div class="grid-card">
-            <img src="${i.imgPoster}" class="img" alt="${i.nombre}" />
+            <img src="${i.imgPoster}" class="grid-img" alt="${i.nombre}" />
             <div class="card-info">
               <p>${i.nombre}</p>
             </div>
@@ -191,13 +191,7 @@ async function insertarModalDiseños(clase, key, p) {
       console.log(i[p][0]);
       let $templete = `
       <div class="modal">
-        <!--cerrar modal-->
-        <img
-          class="cerrar"
-          id="cerrar-modal"
-          src="https://img.icons8.com/color/48/close-window.png"
-          alt="close-window"
-        />
+        
         <div class="modal-contenido">
           <h3>${p}</h3>
           <p>
@@ -208,7 +202,7 @@ async function insertarModalDiseños(clase, key, p) {
         </div>
       </div>
       `;
-      $div.innerHTML = $templete;
+      $div.insertAdjacentHTML("beforeend", $templete);
     });
   } catch (error) {
     let $mensaje = `<p>error${error}</p>`;
@@ -225,12 +219,11 @@ insertarDiseños(".pagina4-grid", "diseños");
     codigo para el modal
   */
 
-const $contenedorModal = document.querySelector(".pagina4-modal"),
-  $modal = document.querySelector(".modal");
+const $contenedorModal = document.querySelector(".pagina4-modal");
 
 document.addEventListener("click", (e) => {
   const $evento = e.target.classList;
-  if ($evento.contains("img")) {
+  if ($evento.contains("grid-img")) {
     let $p = e.target.parentNode.querySelector("p").innerText;
 
     $contenedorModal.classList.remove("invisible");
@@ -238,7 +231,10 @@ document.addEventListener("click", (e) => {
     insertarModalDiseños(".pagina4-modal", "datosModal", $p);
   }
   if ($evento.contains("cerrar")) {
+    let $modal = document.querySelector(".modal");
+
     $contenedorModal.classList.remove("visible");
     $contenedorModal.classList.add("invisible");
+    $modal.remove();
   }
 });
