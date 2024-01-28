@@ -212,7 +212,7 @@ async function insertarModalDiseños(clase, key, p) {
     });
   } catch (error) {
     let $mensaje = `<p>error${error}</p>`;
-    $div.insertAdjacentHTML("beforeend", $mensaje);
+    console.error($mensaje);
   }
 }
 
