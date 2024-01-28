@@ -701,7 +701,7 @@ section:nth-child(odd) {
   font-family: var(--fuente-principal);
 }
 .modal-contenido p {
-  width: 80%;
+  width: 100%;
   color: #001938;
 }
 
@@ -734,7 +734,7 @@ section:nth-child(odd) {
 }
 .visible {
   visibility: visible;
-  animation: scale 0.3s ease;
+  animation: scale 0.2s ease;
 }
 .invisible {
   visibility: hidden;

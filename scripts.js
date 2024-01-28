@@ -116,16 +116,16 @@ async function insertarProyectos(clase, key) {
     if (!res.ok) throw { estado: res.status, estadoTexto: res.statusText };
     json[key].forEach((i) => {
       $templete = `
-      <!--targetas-->
-      <div class="proyectos-targeta">
-        <img  src="${i.imagen}" alt="${i.titulo}">
-        <div class="targeta-informacion">
-          <p >${i.titulo}</p>
-          <p class="targeta-p">${i.descripcion} </p>
-          <a href="${i.codigo}" class="codigo" target="_blank">Codigo</a>
-          <a href="${i.web}" class="web" target="_blank">Sitio web</a>
-        </div>
-      </div>`;
+        <!--targetas-->
+        <div class="proyectos-targeta">
+          <img  src="${i.imagen}" alt="${i.titulo}">
+          <div class="targeta-informacion">
+            <p >${i.titulo}</p>
+            <p class="targeta-p">${i.descripcion} </p>
+            <a href="${i.codigo}" class="codigo" target="_blank">Codigo</a>
+            <a href="${i.web}" class="web" target="_blank">Sitio web</a>
+          </div>
+        </div>`;
       $div.insertAdjacentHTML("beforeend", $templete);
     });
   } catch (error) {
@@ -133,12 +133,11 @@ async function insertarProyectos(clase, key) {
     $tarjeta.insertAdjacentHTML("beforeend", $mensaje);
   }
 }
-//insertar diseños
+//insertar datos del modal
 async function insertarDiseños(clase, key) {
   //clase => contenedor donde se insertara los elementos
   // key =>calve del json a iteral
   const $div = document.querySelector(clase);
-  console.log($div);
   try {
     let res = await fetch("datos/datos.json"),
       json = await res.json();
@@ -147,32 +146,69 @@ async function insertarDiseños(clase, key) {
       if (i.creado) {
         // este templete se inserta el proyecto ya esta creado
         let $templete = `  
-        <div class="grid-card">
-          <img src="${i.imgPoster}" class="img" alt="${i.nombre}" />
-          <div class="card-info">
-            <a href="${i.enlace}">
-              <img
-                width="20"
-                height="20"
-                src="https://img.icons8.com/ios-glyphs/30/external-link.png"
-                alt="external-link"
-              />
-            </a>
-            <p>${i.nombre}</p>
-          </div>
-          </div>`;
+          <div class="grid-card">
+            <img src="${i.imgPoster}" class="img" alt="${i.nombre}" />
+            <div class="card-info">
+              <a href="${i.enlace}">
+                <img
+                  width="20"
+                  height="20"
+                  src="https://img.icons8.com/ios-glyphs/30/external-link.png"
+                  alt="external-link"
+                />
+              </a>
+              <p>${i.nombre}</p>
+            </div>
+            </div>`;
         $div.insertAdjacentHTML("beforeend", $templete);
       } else {
         // este templete se inserta el proyecto no esta creado
         let $templete = `
-         <div class="grid-card">
-           <img src="${i.imgPoster}" class="img" alt="${i.nombre}" />
-           <div class="card-info">
-             <p>${i.nombre}</p>
-           </div>
-           </div>`;
+          <div class="grid-card">
+            <img src="${i.imgPoster}" class="img" alt="${i.nombre}" />
+            <div class="card-info">
+              <p>${i.nombre}</p>
+            </div>
+            </div>`;
         $div.insertAdjacentHTML("beforeend", $templete);
       }
+    });
+  } catch (error) {
+    let $mensaje = `<p>error${error}</p>`;
+    $div.insertAdjacentHTML("beforeend", $mensaje);
+  }
+}
+
+async function insertarModalDiseños(clase, key, p) {
+  //clase => contenedor donde se insertara los elementos
+  // key =>calve del json a iteral
+  const $div = document.querySelector(clase);
+  try {
+    let res = await fetch("datos/datos.json"),
+      json = await res.json();
+    if (!res.ok) throw { estado: res.status, estadoTexto: res.statusText };
+    json[key].forEach((i) => {
+      console.log(i[p][0]);
+      let $templete = `
+      <div class="modal">
+        <!--cerrar modal-->
+        <img
+          class="cerrar"
+          id="cerrar-modal"
+          src="https://img.icons8.com/color/48/close-window.png"
+          alt="close-window"
+        />
+        <div class="modal-contenido">
+          <h3>${p}</h3>
+          <p>
+            ${i[p][0]}
+          </p>
+          <img src="${i[p][1]}" class="img" alt="${p}" />
+          <img src="${i[p][2]}" class="img" alt="${p}" />
+        </div>
+      </div>
+      `;
+      $div.innerHTML = $templete;
     });
   } catch (error) {
     let $mensaje = `<p>error${error}</p>`;
@@ -184,11 +220,10 @@ obtenerLenguajes(".targeta2-lenguajes", "lenguajes");
 obtenerProximosLenguajes(".targeta3-lenguajes", "proximosLenguajes");
 obtenerEdutubers(".targeta4-edutubers", "edutubers");
 insertarProyectos(".pagina3-proyectos", "proyectos");
-
 insertarDiseños(".pagina4-grid", "diseños");
 /*
-  codigo para el modal
-*/
+    codigo para el modal
+  */
 
 const $contenedorModal = document.querySelector(".pagina4-modal"),
   $modal = document.querySelector(".modal");
@@ -196,29 +231,11 @@ const $contenedorModal = document.querySelector(".pagina4-modal"),
 document.addEventListener("click", (e) => {
   const $evento = e.target.classList;
   if ($evento.contains("img")) {
+    let $p = e.target.parentNode.querySelector("p").innerText;
+
     $contenedorModal.classList.remove("invisible");
     $contenedorModal.classList.add("visible");
-
-    $contenedorModal.innerHTML = `<div class="modal">
-    <!--cerrar modal-->
-    <img
-      class="cerrar"
-      id="cerrar-modal"
-      src="https://img.icons8.com/color/48/close-window.png"
-      alt="close-window"
-    />
-    <div class="modal-contenido">
-      <h3>Color b</h3>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-        repellat aliquam doloremque quod nam est deleniti quaerat?
-        Eligendi rerum nemo ipsum rem quaerat porro natus ullam esse,
-        vitae, ipsa itaque.
-      </p>
-      <img src="desktop.png" class="img" alt="" />
-      <img src="Diseño sin título.png" class="img" alt="" />
-    </div>
-  </div>`;
+    insertarModalDiseños(".pagina4-modal", "datosModal", $p);
   }
   if ($evento.contains("cerrar")) {
     $contenedorModal.classList.remove("visible");
