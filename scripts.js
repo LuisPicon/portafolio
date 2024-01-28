@@ -120,11 +120,13 @@ async function insertarProyectos(clase, key) {
         <div class="proyectos-targeta">
           <img  src="${i.imagen}" alt="${i.titulo}">
           <div class="targeta-informacion">
-            <p >${i.titulo}</p>
+            <p class="targeta-informacion-titulo">${i.titulo}</p>
             <p class="targeta-p">${i.descripcion} </p>
-            <a href="${i.codigo}" class="codigo" target="_blank">Codigo</a>
-            <a href="${i.web}" class="web" target="_blank">Sitio web</a>
-          </div>
+            <div>
+              <a href="${i.codigo}" class="codigo" target="_blank">Codigo</a>
+              <a href="${i.web}" class="web" target="_blank">Sitio web</a>
+            </div>
+            </div>
         </div>`;
       $div.insertAdjacentHTML("beforeend", $templete);
     });

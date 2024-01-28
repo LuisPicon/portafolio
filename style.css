@@ -342,7 +342,6 @@ section:nth-child(odd) {
   max-height: 200px;
   overflow-x: auto;
 }
-
 .targeta3-titulo {
   font-size: larger;
 }
@@ -466,7 +465,7 @@ section:nth-child(odd) {
 }
 .proyectos-targeta {
   width: 100%;
-  height: 21rem;
+  min-height: 20.5rem;
   margin: auto;
   background-color: var(--color-azul-claro);
   border-radius: 0.3rem;
@@ -479,13 +478,22 @@ section:nth-child(odd) {
   margin-bottom: -1rem;
 }
 .targeta-informacion {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
   padding: 0.5rem;
   color: var(--blanco);
 }
+.targeta-informacion-titulo {
+  font-size: large;
+}
 .targeta-p {
   font-size: medium;
+  width: 100%;
+  min-height: 60%;
   color: var(--color-terciario);
   margin-top: -12px;
+  overflow: hidden;
 }
 .targeta-informacion a {
   display: inline-block;
@@ -495,6 +503,7 @@ section:nth-child(odd) {
   width: 7rem;
   border-radius: 0.3rem;
   font-size: 1rem;
+  margin-top: -6px;
 }
 .codigo {
   margin-right: 0.5rem;
@@ -547,7 +556,6 @@ section:nth-child(odd) {
   }
 
   .targeta-informacion a {
-    margin-top: -10px;
   }
   .proyectos-targeta img {
     height: 50%;
@@ -571,9 +579,12 @@ section:nth-child(odd) {
 */
 .pagina-4 {
   scroll-margin: -18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
 }
-.pagina4-titulo {
+.titulo-diseños {
   color: var(--blanco);
   padding-top: 1rem;
   font-family: var(--fuente-principal);
@@ -588,7 +599,9 @@ section:nth-child(odd) {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 251px);
   gap: 1rem;
+
   max-width: 64rem;
+  margin: auto;
 }
 .grid-card {
   cursor: pointer;
@@ -632,10 +645,11 @@ section:nth-child(odd) {
   font-family: var(--fuente-principal);
 }
 @media screen and (min-width: 37.5em) {
-  .pagina4-titulo {
-    text-align: center;
+  .pagina-4 {
+    align-items: center;
   }
   .pagina4-grid {
+    margin: 0;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 251px);
   }
@@ -644,9 +658,8 @@ section:nth-child(odd) {
   .pagina-4 {
     scroll-margin: 5rem;
   }
-  .pagina4-titulo {
-    text-align: center;
-    margin-left: -1.5rem;
+  .titulo-diseños {
+    margin-left: -1.7rem;
   }
 
   .pagina4-grid {
@@ -669,7 +682,7 @@ section:nth-child(odd) {
     transform: translateY(0%);
   }
 }
-/* modal de la pagian 4*/
+
 .pagina4-modal {
   position: fixed;
   z-index: 10;
@@ -679,6 +692,13 @@ section:nth-child(odd) {
   bottom: 0;
   backdrop-filter: blur(6px);
 }
+.titulo-diseños {
+  color: var(--blanco);
+  font-family: var(--fuente-principal);
+  font-size: x-large;
+}
+
+/*modal*/
 .modal {
   border-radius: 0.3rem;
   background-color: var(--blanco);
@@ -698,7 +718,6 @@ section:nth-child(odd) {
   width: 100%;
   color: #001938;
 }
-
 .modal .img {
   border-radius: 0.3rem;
   width: 100%;
