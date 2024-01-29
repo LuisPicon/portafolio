@@ -195,10 +195,12 @@ async function insertarModalDiseños(clase, key, p) {
       <div class="modal">
         
         <div class="modal-contenido">
+        <div>
           <h3>${p}</h3>
           <p>
             ${i[p][0]}
-          </p>
+          </p>  
+        </div>
           <img src="${i[p][1]}" class="img" alt="${p}" />
           <img src="${i[p][2]}" class="img" alt="${p}" />
         </div>
@@ -230,10 +232,12 @@ document.addEventListener("click", (e) => {
 
     $contenedorModal.classList.remove("invisible");
     $contenedorModal.classList.add("visible");
+    document.documentElement.classList.add("scroll-none");
     insertarModalDiseños(".pagina4-modal", "datosModal", $p);
   }
-  if ($evento.contains("cerrar")) {
+  if ($evento.contains("cerrar-modal")) {
     let $modal = document.querySelector(".modal");
+    document.documentElement.classList.remove("scroll-none");
 
     $contenedorModal.classList.remove("visible");
     $contenedorModal.classList.add("invisible");
