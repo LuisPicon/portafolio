@@ -24,7 +24,7 @@ $secciones.forEach((i) => observador.observe(i));
 //insertar lenguajes
 async function obtenerLenguajes(clase, key) {
   //clase => contenedor donde se insertara los elementos
-  // key =>calve del json a iteral
+  // key =>calve del json a iterar
   const $tarjeta = document.querySelector(clase);
   const $fragmento = document.createDocumentFragment();
   try {
@@ -52,10 +52,10 @@ async function obtenerLenguajes(clase, key) {
   }
 }
 
-//inserta de un json el texto de los proximos lenguajes
+//inserta de un json el texto de los próximos lenguajes
 async function obtenerProximosLenguajes(clase, key) {
   //clase => contenedor donde se insertara los elementos
-  // key =>calve del json a iteral
+  // key =>calve del json a iterar
   const $tarjeta = document.querySelector(clase);
   const $fragmento = document.createDocumentFragment();
   try {
@@ -79,7 +79,7 @@ async function obtenerProximosLenguajes(clase, key) {
 
 async function obtenerEdutubers(clase, key) {
   //clase => contenedor donde se insertara los elementos
-  // key =>calve del json a iteral
+  // key =>calve del json a iterar
   const $tarjeta = document.querySelector(clase);
   const $fragmento = document.createDocumentFragment();
   try {
@@ -116,14 +116,14 @@ async function insertarProyectos(clase, key) {
     if (!res.ok) throw { estado: res.status, estadoTexto: res.statusText };
     json[key].forEach((i) => {
       $templete = `
-        <!--targetas-->
+        <!--tarjetas-->
         <div class="proyectos-targeta">
           <img  src="${i.imagen}" alt="${i.titulo}">
           <div class="targeta-informacion">
             <p class="targeta-informacion-titulo">${i.titulo}</p>
             <p class="targeta-p">${i.descripcion} </p>
             <div>
-              <a href="${i.codigo}" class="codigo" target="_blank">Codigo</a>
+              <a href="${i.codigo}" class="codigo" target="_blank">Código</a>
               <a href="${i.web}" class="web" target="_blank">Sitio web</a>
             </div>
             </div>
@@ -138,7 +138,7 @@ async function insertarProyectos(clase, key) {
 //insertar datos del modal
 async function insertarDiseños(clase, key) {
   //clase => contenedor donde se insertara los elementos
-  // key =>calve del json a iteral
+  // key =>calve del json a iterar
   const $div = document.querySelector(clase);
   try {
     let res = await fetch("datos/datos.json"),
@@ -183,7 +183,7 @@ async function insertarDiseños(clase, key) {
 
 async function insertarModalDiseños(clase, key, p) {
   //clase => contenedor donde se insertara los elementos
-  // key =>calve del json a iteral
+  // key =>calve del json a iterar
   const $div = document.querySelector(clase);
   try {
     let res = await fetch("datos/datos.json"),

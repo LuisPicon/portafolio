@@ -51,7 +51,7 @@ section:nth-child(odd) {
 }
 
 /* ********** Componentes ********** */
-/***cabezera***/
+/***cabecera***/
 .cabezera {
   z-index: 9;
   position: fixed;
