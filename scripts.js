@@ -149,7 +149,7 @@ async function insertarDiseños(clase, key) {
         // este templete se inserta el proyecto ya esta creado
         let $templete = `  
           <div class="grid-card">
-            <img src="${i.imgPoster}" class="img" alt="${i.nombre}" />
+            <img src="${i.imgPoster}" class="grid-img" alt="${i.nombre}" />
             <div class="card-info">
               <a href="${i.enlace}">
                 <img
