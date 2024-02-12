@@ -20,7 +20,6 @@ const cb = (entradas) => {
 const observador = new IntersectionObserver(cb, { threshold: [0.5, 0.75] });
 
 $secciones.forEach((i) => observador.observe(i));
-
 //insertar lenguajes
 async function obtenerLenguajes(clase, key) {
   //clase => contenedor donde se insertara los elementos
@@ -51,7 +50,6 @@ async function obtenerLenguajes(clase, key) {
     $tarjeta.insertAdjacentHTML("beforeend", $mensaje);
   }
 }
-
 //inserta de un json el texto de los próximos lenguajes
 async function obtenerProximosLenguajes(clase, key) {
   //clase => contenedor donde se insertara los elementos
@@ -76,7 +74,6 @@ async function obtenerProximosLenguajes(clase, key) {
     $tarjeta.insertAdjacentHTML("beforeend", $mensaje);
   }
 }
-
 async function obtenerEdutubers(clase, key) {
   //clase => contenedor donde se insertara los elementos
   // key =>calve del json a iterar
@@ -103,7 +100,6 @@ async function obtenerEdutubers(clase, key) {
     $tarjeta.insertAdjacentHTML("beforeend", $mensaje);
   }
 }
-
 //insertar proyectos
 async function insertarProyectos(clase, key) {
   //clase => contenedor donde se insertara los elementos
@@ -192,19 +188,19 @@ async function insertarModalDiseños(clase, key, p) {
     json[key].forEach((i) => {
       console.log(i[p][0]);
       let $templete = `
-      <div class="modal">
-        
-        <div class="modal-contenido">
-        <div>
-          <h3>${p}</h3>
-          <p>
-            ${i[p][0]}
-          </p>  
+        <div class="modal">
+          <img class="cerrar-modal" id="cerrar-modal" src="https://img.icons8.com/color/48/close-window.png" alt="cerrar modal"/>
+          <div class="modal-contenido">
+            <div>
+              <h3>${p}</h3>
+              <p>${i[p][0]}</p>  
+            </div>
+            <div class="modal-img">
+              <img src="${i[p][1]}" class="img" alt="${p}" />
+              <img src="${i[p][2]}" class="img" alt="${p}" />
+            </div>
+          </div>
         </div>
-          <img src="${i[p][1]}" class="img" alt="${p}" />
-          <img src="${i[p][2]}" class="img" alt="${p}" />
-        </div>
-      </div>
       `;
       $div.insertAdjacentHTML("beforeend", $templete);
     });
@@ -213,18 +209,13 @@ async function insertarModalDiseños(clase, key, p) {
     console.error($mensaje);
   }
 }
-
 obtenerLenguajes(".targeta2-lenguajes", "lenguajes");
 obtenerProximosLenguajes(".targeta3-lenguajes", "proximosLenguajes");
 obtenerEdutubers(".targeta4-edutubers", "edutubers");
 insertarProyectos(".pagina3-proyectos", "proyectos");
 insertarDiseños(".pagina4-grid", "diseños");
-/*
-    codigo para el modal
-  */
-
+//código para el modal
 const $contenedorModal = document.querySelector(".pagina4-modal");
-
 document.addEventListener("click", (e) => {
   const $evento = e.target.classList;
   if ($evento.contains("grid-img")) {
