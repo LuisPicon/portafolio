@@ -189,15 +189,16 @@ async function insertarModalDiseños(clase, key, p) {
       console.log(i[p][0]);
       let $templete = `
         <div class="modal">
-          <img class="cerrar-modal" id="cerrar-modal" src="https://img.icons8.com/color/48/close-window.png" alt="cerrar modal"/>
+          <img class="cerrar-modal" id="cerrar-modal" src="multiply.png" alt="cerrar modal"/>
           <div class="modal-contenido">
-            <div>
+            <div class="modal-contenido-text">
               <h3>${p}</h3>
               <p>${i[p][0]}</p>  
             </div>
             <div class="modal-img">
               <img src="${i[p][1]}" class="img" alt="${p}" />
               <img src="${i[p][2]}" class="img" alt="${p}" />
+            
             </div>
           </div>
         </div>
