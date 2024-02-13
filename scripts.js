@@ -157,7 +157,8 @@ async function insertarDiseños(clase, key) {
               </a>
               <p>${i.nombre}</p>
             </div>
-            </div>`;
+            </div>
+            `;
         $div.insertAdjacentHTML("beforeend", $templete);
       } else {
         // este templete se inserta el proyecto no esta creado
@@ -177,62 +178,8 @@ async function insertarDiseños(clase, key) {
   }
 }
 
-async function insertarModalDiseños(clase, key, p) {
-  //clase => contenedor donde se insertara los elementos
-  // key =>calve del json a iterar
-  const $div = document.querySelector(clase);
-  try {
-    let res = await fetch("datos/datos.json"),
-      json = await res.json();
-    if (!res.ok) throw { estado: res.status, estadoTexto: res.statusText };
-    json[key].forEach((i) => {
-      console.log(i[p][0]);
-      let $templete = `
-        <div class="modal">
-          <img class="cerrar-modal" id="cerrar-modal" src="multiply.png" alt="cerrar modal"/>
-          <div class="modal-contenido">
-            <div class="modal-contenido-text">
-              <h3>${p}</h3>
-              <p>${i[p][0]}</p>  
-            </div>
-            <div class="modal-img">
-              <img src="${i[p][1]}" class="img" alt="${p}" />
-              <img src="${i[p][2]}" class="img" alt="${p}" />
-            
-            </div>
-          </div>
-        </div>
-      `;
-      $div.insertAdjacentHTML("beforeend", $templete);
-    });
-  } catch (error) {
-    let $mensaje = `<p>error${error}</p>`;
-    console.error($mensaje);
-  }
-}
 obtenerLenguajes(".targeta2-lenguajes", "lenguajes");
 obtenerProximosLenguajes(".targeta3-lenguajes", "proximosLenguajes");
 obtenerEdutubers(".targeta4-edutubers", "edutubers");
 insertarProyectos(".pagina3-proyectos", "proyectos");
 insertarDiseños(".pagina4-grid", "diseños");
-//código para el modal
-const $contenedorModal = document.querySelector(".pagina4-modal");
-document.addEventListener("click", (e) => {
-  const $evento = e.target.classList;
-  if ($evento.contains("grid-img")) {
-    let $p = e.target.parentNode.querySelector("p").innerText;
-
-    $contenedorModal.classList.remove("invisible");
-    $contenedorModal.classList.add("visible");
-    document.documentElement.classList.add("scroll-none");
-    insertarModalDiseños(".pagina4-modal", "datosModal", $p);
-  }
-  if ($evento.contains("cerrar-modal")) {
-    let $modal = document.querySelector(".modal");
-    document.documentElement.classList.remove("scroll-none");
-
-    $contenedorModal.classList.remove("visible");
-    $contenedorModal.classList.add("invisible");
-    $modal.remove();
-  }
-});
