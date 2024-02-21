@@ -73,14 +73,21 @@
       "titulo": "Pomodoro",
       "descripcion": "Pomodoro construido con HTML, CSS y JavaScript",
       "codigo": "https://github.com/L-E-R-P/Pomodoro",
-      "web": "https://pomodoro.luisrodriguez.online/"
+      "web": "https://pomodoro.luispicon.online/"
     },
     {
       "imagen": "https://i.imgur.com/KYjPJe3.jpg",
       "titulo": "T O D O",
       "descripcion": "aplicación de tareas construida con HTML, CSS y JavaScript",
       "codigo": "https://github.com/L-E-R-P/TODO",
-      "web": "https://todo.luisrodriguez.online/"
+      "web": "https://todo.luispicon.online/"
+    },
+    {
+      "imagen": "https://i.imgur.com/YRSOcPU.png",
+      "titulo": "Color b",
+      "descripcion": "Encuentra los colores mas populares en el desarrollo de software",
+      "codigo": "https://github.com/LuisPicon/color-b",
+      "web": "https://colorb.luispicon.online/"
     }
   ],
   "diseños": [
