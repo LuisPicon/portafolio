@@ -68,6 +68,14 @@
       "codigo": "https://github.com/L-E-R-P/GENO",
       "web": "https://genovasllaneroemprendedor.com/"
     },
+    
+    {
+      "imagen": "https://i.imgur.com/CRmPfZd.png",
+      "titulo": "Color b",
+      "descripcion": "Encuentra los colores mas populares en el desarrollo de software",
+      "codigo": "https://github.com/LuisPicon/color-b",
+      "web": "https://colorb.luispicon.online/"
+    }
     {
       "imagen": "https://i.imgur.com/ioNBgsi.jpg",
       "titulo": "Pomodoro",
@@ -81,13 +89,6 @@
       "descripcion": "aplicación de tareas construida con HTML, CSS y JavaScript",
       "codigo": "https://github.com/L-E-R-P/TODO",
       "web": "https://todo.luispicon.online/"
-    },
-    {
-      "imagen": "https://i.imgur.com/YRSOcPU.png",
-      "titulo": "Color b",
-      "descripcion": "Encuentra los colores mas populares en el desarrollo de software",
-      "codigo": "https://github.com/LuisPicon/color-b",
-      "web": "https://colorb.luispicon.online/"
     }
   ],
   "diseños": [
