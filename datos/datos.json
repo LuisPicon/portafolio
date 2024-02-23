@@ -42,24 +42,7 @@
       "nombre": "React",
       "color": "#00CDFF"
     }
-  ],
-  "edutubers": [
-    {
-      "nombre": "Jhonmircha",
-      "color": "#F86500",
-      "canal": "https://www.youtube.com/@jonmircha"
-    },
-    {
-      "nombre": "midudev",
-      "color": "#0277BD",
-      "canal": "https://www.youtube.com/@midudev"
-    },
-    {
-      "nombre": "MoureDev",
-      "color": "#D8A306",
-      "canal": "https://www.youtube.com/@mouredev"
-    }
-  ],
+  ]
   "proyectos": [
     {
       "imagen": "https://i.imgur.com/76cg4ED.jpg",
@@ -68,14 +51,13 @@
       "codigo": "https://github.com/L-E-R-P/GENO",
       "web": "https://genovasllaneroemprendedor.com/"
     },
-    
     {
       "imagen": "https://i.imgur.com/CRmPfZd.png",
       "titulo": "Color b",
       "descripcion": "Encuentra los colores mas populares en el desarrollo de software",
       "codigo": "https://github.com/LuisPicon/color-b",
       "web": "https://colorb.luispicon.online/"
-    }
+    },
     {
       "imagen": "https://i.imgur.com/ioNBgsi.jpg",
       "titulo": "Pomodoro",
