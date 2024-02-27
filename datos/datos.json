@@ -58,6 +58,14 @@
       "codigo": "https://github.com/LuisPicon/color-b",
       "web": "https://colorb.luispicon.online/"
     },
+
+    {
+      "imagen": "https://i.imgur.com/aRTdEVo.png",
+      "titulo": "Devfinder",
+      "descripcion": "Buscador de usuarios de github",
+      "codigo": "https://github.com/LuisPicon/devfinder",
+      "web": "https://devfinder.luispicon.online/"
+    },
     {
       "imagen": "https://i.imgur.com/ioNBgsi.jpg",
       "titulo": "Pomodoro",

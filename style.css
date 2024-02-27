@@ -81,7 +81,7 @@ section:nth-child(odd) {
 }
 .menu {
   width: 30%;
-  gap: 1px;
+  gap: 0.5rem;
   margin-top: 4px;
 }
 .menu-a {
@@ -228,7 +228,7 @@ section:nth-child(odd) {
     max-width: 64rem;
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .pagina-1-informacion {
     text-align: left;
@@ -241,8 +241,8 @@ section:nth-child(odd) {
     width: 100%;
   }
   .pagina-1-imagen img {
-    width: 17rem;
-    height: 17rem;
+    width: 14rem;
+    height: 14rem;
   }
 }
 /***pagina 2***/
@@ -377,7 +377,7 @@ section:nth-child(odd) {
     justify-content: center;
   }
   .pagina-2-contenedor {
-    width: 100%;
+    width: 75%;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, 1fr, 300px);
     gap: 1rem;
@@ -423,8 +423,7 @@ section:nth-child(odd) {
     margin: 0;
   }
 }
-@media screen and (min-width: 75em) {
-}
+
 /**** pagina 3 ******/
 .pagina-3 {
   margin-top: 1rem;
@@ -523,8 +522,8 @@ section:nth-child(odd) {
     scroll-margin: 5rem;
   }
   .pagina3-proyectos {
-    width: 100%;
-    grid-template-columns: repeat(3, 320px);
+    width: 75%;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     row-gap: 1.5rem;
     column-gap: 1.5rem;
@@ -620,7 +619,7 @@ section:nth-child(odd) {
 @media screen and (min-width: 64em) {
   .pagina4-grid {
     padding: 0.5rem;
-    width: 100%;
+    width: 75%;
     grid-template-columns: repeat(3, 1fr);
   }
 }
