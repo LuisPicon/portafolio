@@ -52,9 +52,9 @@
       "web": "https://genovasllaneroemprendedor.com/"
     },
     {
-      "imagen": "https://i.imgur.com/gbA9cuS.png",
+      "imagen": "https://i.imgur.com/sK60gGu.png",
       "titulo": "Color b",
-      "descripcion": "Librería de colores en formato RGB, HEX de las tecnologías mas populares en web",
+      "descripcion": "Librería de colores de las tecnologías mas populares en web",
       "codigo": "https://github.com/LuisPicon/color-b",
       "web": "https://colorb.luispicon.online/"
     },
@@ -75,7 +75,7 @@
       "web": "https://pomodoro.luispicon.online/"
     },
     {
-      "imagen": "https://i.imgur.com/bRZ39kE.png",
+      "imagen": "https://i.imgur.com/3Dl5LVK.png",
       "titulo": "T O D O",
       "descripcion": "Crea y guarda tareas en tu navegador de manera simple y efectiva ",
       "codigo": "https://github.com/L-E-R-P/TODO",

@@ -246,6 +246,8 @@ section:nth-child(odd) {
   }
 }
 /***pagina 2***/
+.pagina-2 {
+}
 .pagina-2-contenedor {
   display: grid;
   grid-template-columns: 1fr;
@@ -394,7 +396,6 @@ section:nth-child(odd) {
     grid-column: 1/3;
     grid-row: 1/2;
   }
-
   .targeta2-contenedor {
     align-self: end;
     max-height: 250px;
@@ -423,7 +424,6 @@ section:nth-child(odd) {
     margin: 0;
   }
 }
-
 /**** pagina 3 ******/
 .pagina-3 {
   margin-top: 1rem;
@@ -474,8 +474,9 @@ section:nth-child(odd) {
 .targeta-p {
   font-size: medium;
   width: 100%;
-  min-height: 60%;
-  max-width: 20rem;
+  min-height: 50%;
+  max-height: 50%;
+  max-width: 100%;
   color: var(--color-terciario);
   margin-top: -12px;
   overflow: hidden;
@@ -516,16 +517,12 @@ section:nth-child(odd) {
   }
   .proyectos-targeta {
     height: 23rem;
-
     width: 100%;
   }
 }
-@media screen and (min-width: 64em) {
-  .pagina-3 {
-    scroll-margin: 5rem;
-  }
+@media screen and (min-width: 1024px) {
   .pagina3-proyectos {
-    width: 75%;
+    width: 90%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     row-gap: 1.5rem;
@@ -534,10 +531,17 @@ section:nth-child(odd) {
   .proyectos-titulo {
     margin-left: -1rem;
   }
-  .proyectos-targeta {
-  }
+
   .proyectos-targeta img {
     height: 60%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .pagina3-proyectos {
+    width: 75%;
+  }
+  .pagina-3 {
+    scroll-margin: 5rem;
   }
 }
 /*pagina 4*/
@@ -545,10 +549,10 @@ section:nth-child(odd) {
   grid de 3*3 con un modal para cada targeta
 */
 .pagina-4 {
+  min-height: 85vh;
   scroll-margin: -18px;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
   flex-direction: column;
 }
 .titulo-diseños {
@@ -621,11 +625,14 @@ section:nth-child(odd) {
 @media screen and (min-width: 64em) {
   .pagina4-grid {
     padding: 0.5rem;
-    width: 75%;
+    width: 90%;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 75em) {
+  .pagina4-grid {
+    width: 75%;
+  }
   .pagina-4 {
     scroll-margin: 5rem;
   }
@@ -637,6 +644,19 @@ section:nth-child(odd) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
+}
+footer {
+  text-align: center;
+  color: var(--blanco);
+  font-family: var(--fuente-principal);
+}
+
+.sbetav {
+  color: var(--color-secundario);
+}
+
+.jon {
+  color: #ff822d;
 }
 /*clases a agregar con java Scripts*/
 /*color del indice en el menu de navegacion*/
