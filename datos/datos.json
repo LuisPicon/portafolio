@@ -46,37 +46,38 @@
   "proyectos": [
     {
       "imagen": "https://i.imgur.com/76cg4ED.jpg",
-      "titulo": "Genovas Llanero Emprendedor",
-      "descripcion": "Tienda hecho con WordPress, componentes de HTML, CSS y JavaScript.",
+      "titulo": "Genovas Llanero ",
+      "descripcion": "Tienda de embutidos de carne a nivel nacional .",
       "codigo": "https://github.com/L-E-R-P/GENO",
       "web": "https://genovasllaneroemprendedor.com/"
     },
     {
-      "imagen": "https://i.imgur.com/CRmPfZd.png",
+      "imagen": "https://i.imgur.com/gbA9cuS.png",
       "titulo": "Color b",
-      "descripcion": "Encuentra los colores mas populares en el desarrollo de software",
+      "descripcion": "Librería de colores en formato RGB, HEX de las tecnologías mas populares en web",
       "codigo": "https://github.com/LuisPicon/color-b",
       "web": "https://colorb.luispicon.online/"
     },
-
     {
-      "imagen": "https://i.imgur.com/aRTdEVo.png",
+      "imagen": "https://i.imgur.com/DIR0ja0.png",
       "titulo": "Devfinder",
-      "descripcion": "Buscador de usuarios de github de manera simple y elegante",
+      "descripcion": "Buscador de usuarios de github con  un sistema de búsquedas recientes",
       "codigo": "https://github.com/LuisPicon/devfinder",
+
       "web": "https://devfinder.luispicon.online/"
     },
     {
-      "imagen": "https://i.imgur.com/ioNBgsi.jpg",
+      "imagen": "https://i.imgur.com/W9OdTfc.png",
       "titulo": "Pomodoro",
-      "descripcion": "Pomodoro construido con HTML, CSS y JavaScript",
+      "descripcion": "Controla tus actividades en tres diferentes tiempos.",
       "codigo": "https://github.com/L-E-R-P/Pomodoro",
+
       "web": "https://pomodoro.luispicon.online/"
     },
     {
-      "imagen": "https://i.imgur.com/KYjPJe3.jpg",
+      "imagen": "https://i.imgur.com/bRZ39kE.png",
       "titulo": "T O D O",
-      "descripcion": "aplicación de tareas construida con HTML, CSS y JavaScript",
+      "descripcion": "Crea y guarda tareas en tu navegador de manera simple y efectiva ",
       "codigo": "https://github.com/L-E-R-P/TODO",
       "web": "https://todo.luispicon.online/"
     }
