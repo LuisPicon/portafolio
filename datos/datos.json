@@ -25,24 +25,6 @@
       "imagen": "https://img.icons8.com/color/48/figma--v1.png"
     }
   ],
-  "proximosLenguajes": [
-    {
-      "nombre": "php",
-      "color": "#7A86B8"
-    },
-    {
-      "nombre": "Bootstrap",
-      "color": "#780FF7"
-    },
-    {
-      "nombre": "Node.js",
-      "color": "#659D5B"
-    },
-    {
-      "nombre": "React",
-      "color": "#00CDFF"
-    }
-  ],
   "proyectos": [
     {
       "imagen": "https://i.imgur.com/76cg4ED.jpg",

@@ -50,56 +50,6 @@ async function obtenerLenguajes(clase, key) {
     $tarjeta.insertAdjacentHTML("beforeend", $mensaje);
   }
 }
-//inserta de un json el texto de los próximos lenguajes
-async function obtenerProximosLenguajes(clase, key) {
-  //clase => contenedor donde se insertara los elementos
-  // key =>calve del json a iterar
-  const $tarjeta = document.querySelector(clase);
-  const $fragmento = document.createDocumentFragment();
-  try {
-    let res = await fetch("datos/datos.json"),
-      json = await res.json();
-    if (!res.ok) throw { estado: res.status, estadoTexto: res.statusText };
-    json[key].forEach((i) => {
-      const $div = document.createElement("div");
-      const $p = document.createElement("p");
-      $p.textContent = i.nombre;
-      $div.appendChild($p);
-      $div.style.backgroundColor = i.color;
-      $fragmento.appendChild($div);
-    });
-    $tarjeta.appendChild($fragmento);
-  } catch (error) {
-    let $mensaje = `<p>error${error}</p>`;
-    $tarjeta.insertAdjacentHTML("beforeend", $mensaje);
-  }
-}
-async function obtenerEdutubers(clase, key) {
-  //clase => contenedor donde se insertara los elementos
-  // key =>calve del json a iterar
-  const $tarjeta = document.querySelector(clase);
-  const $fragmento = document.createDocumentFragment();
-  try {
-    let res = await fetch("datos/datos.json"),
-      json = await res.json();
-    if (!res.ok) throw { estado: res.status, estadoTexto: res.statusText };
-    json[key].forEach((i) => {
-      const $div = document.createElement("div");
-      const $a = document.createElement("a");
-      $a.href = i.canal;
-      $a.alt = i.nombre;
-      $a.target = "_blank";
-      $a.textContent = i.nombre;
-      $div.appendChild($a);
-      $div.style.backgroundColor = i.color;
-      $fragmento.appendChild($div);
-    });
-    $tarjeta.appendChild($fragmento);
-  } catch (error) {
-    let $mensaje = `<p>error${error}</p>`;
-    $tarjeta.insertAdjacentHTML("beforeend", $mensaje);
-  }
-}
 //insertar proyectos
 async function insertarProyectos(clase, key) {
   //clase => contenedor donde se insertara los elementos
@@ -177,9 +127,6 @@ async function insertarDiseños(clase, key) {
     $div.insertAdjacentHTML("beforeend", $mensaje);
   }
 }
-
-obtenerLenguajes(".targeta2-lenguajes", "lenguajes");
-obtenerProximosLenguajes(".targeta3-lenguajes", "proximosLenguajes");
-obtenerEdutubers(".targeta4-edutubers", "edutubers");
+obtenerLenguajes(".lenguajes", "lenguajes");
 insertarProyectos(".pagina3-proyectos", "proyectos");
 insertarDiseños(".pagina4-grid", "diseños");
