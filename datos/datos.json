@@ -27,41 +27,33 @@
   ],
   "proyectos": [
     {
-      "imagen": "https://i.imgur.com/76cg4ED.jpg",
+      "imagen": "https://i.imgur.com/tPa0Uyt.png",
       "titulo": "Genovas Llanero ",
-      "descripcion": "Tienda de embutidos de carne a nivel nacional .",
+      "descripcion": "Desabollador frontend en genovas llanero emprendedor, tienda online con envíos a toda Colombia.",
       "codigo": "https://github.com/L-E-R-P/GENO",
       "web": "https://genovasllaneroemprendedor.com/"
     },
     {
-      "imagen": "https://i.imgur.com/sK60gGu.png",
+      "imagen": "https://i.imgur.com/j2sPdd2.png",
       "titulo": "Color b",
-      "descripcion": "Librería de colores de las tecnologías mas populares en web",
+      "descripcion": "Colores en formato RGB y HEX mas utilizados en los logos de los lenguajes y tecnologías del desarrollo de software.",
       "codigo": "https://github.com/LuisPicon/color-b",
       "web": "https://colorb.luispicon.online/"
     },
     {
+      "imagen": "https://i.imgur.com/ss7QPLV.png",
+      "titulo": "Html Pro",
+      "descripcion": "home pages en español e ingles de mi  Extension para visual estudio code, la cual genera codigo html profesional.",
+      "codigo": "https://github.com/LuisPicon/htmlPro",
+      "web": "https://html-pro.luispicon.online/"
+    },
+    {
       "imagen": "https://i.imgur.com/DIR0ja0.png",
       "titulo": "Devfinder",
-      "descripcion": "Buscador de usuarios de github con  un sistema de búsquedas recientes",
+      "descripcion": "Reto de frontend-mentor, buscador de usuarios de gitHub, al cual lo mejore con un sistemas de búsquedas recientes. ",
       "codigo": "https://github.com/LuisPicon/devfinder",
 
       "web": "https://devfinder.luispicon.online/"
-    },
-    {
-      "imagen": "https://i.imgur.com/W9OdTfc.png",
-      "titulo": "Pomodoro",
-      "descripcion": "Controla tus actividades en tres diferentes tiempos.",
-      "codigo": "https://github.com/L-E-R-P/Pomodoro",
-
-      "web": "https://pomodoro.luispicon.online/"
-    },
-    {
-      "imagen": "https://i.imgur.com/3Dl5LVK.png",
-      "titulo": "T O D O",
-      "descripcion": "Crea y guarda tareas en tu navegador de manera simple y efectiva ",
-      "codigo": "https://github.com/L-E-R-P/TODO",
-      "web": "https://todo.luispicon.online/"
     }
   ],
   "diseños": [
