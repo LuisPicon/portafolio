@@ -287,7 +287,7 @@ section:nth-child(odd) {
   width: 100%;
   min-height: 55%;
   max-height: 55%;
-  border-radius: 0.3rem 0.3rem 0;
+  border-radius: 0.3rem 0.3rem 0 0;
   margin-bottom: -1rem;
 }
 .targeta-informacion {
@@ -343,7 +343,7 @@ section:nth-child(odd) {
     column-gap: 1rem;
   }
   .proyectos-targeta {
-    height: 22rem;
+    height: 23rem;
     width: 100%;
   }
 }
